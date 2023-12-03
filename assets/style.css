@@ -1,0 +1,55 @@
+:root {
+    --header-blue: #1512d0;
+    --major-cities: #c7dbe0;
+}
+
+.header {
+    background: linear-gradient(to left, var(--header-blue), #0c7b93);
+    color: white;
+    width: 99vw;
+    max-width: 99vw;
+    height: 75px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    border-radius: 9px;
+}
+
+/* .aside {
+    /* margin: 10px 1px 0; */
+
+.city-search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 1px 0;
+}
+
+.search-btn {
+    background-color: #158ca7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 7px 1px 7px 0;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 170px;
+    /* box-shadow: 1px 2px rgb(14, 31, 35); */
+}
+
+.major-cities {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 1px 0;
+    width: 170px;
+    background-color: var(--major-cities);
+    cursor: pointer;
+}
