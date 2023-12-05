@@ -4,33 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Weather App</title>
-    <link rel="stylesheet" href="assets/style.css">
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Weather App</title>
 </head>
 
-<header>
-    <div class="header">
+<body>
+    <header class="header">
         <h1>Weather Dashboard</h1>
-    </div>
-</header>
+    </header>
 
-<aside>
-    <div class="aside">
-        <h2>Search for a City:</h2>
-        <form action="index.php" method="post">
-            <input class="city-search" type="text" name="city" placeholder="City Name">
-            <input class="search-btn" type="submit" name="submit" value="Search">
-            <input class="major-cities" type="submit" name="submit" value="Atlanta">
-            <input class="major-cities" type="submit" name="submit" value="Denver">
-            <input class="major-cities" type="submit" name="submit" value="Seattle">
-            <input class="major-cities" type="submit" name="submit" value="San Francisco">
-            <input class="major-cities" type="submit" name="submit" value="Orlando">
-            <input class="major-cities" type="submit" name="submit" value="New York City">
-            <input class="major-cities" type="submit" name="submit" value="Chicago">
-            <input class="major-cities" type="submit" name="submit" value="Austin">
-        </form>
+    <main>
+        <div class="card">
+            <h2 class="card-header">Search for a City:</h2>
+                <form id="city-form" action="index.php" method="post" class="card-body">
+                <input id="city-name" class="city-search" type="text" name="city" placeholder="City Name">
+                <input class="search-btn" type="submit" name="submit" value="Search">
+            <!-- <input class="major-cities" type="submit" name="submit" value="Atlanta" id="Atlanta">
+            <input class="major-cities" type="submit" name="submit" value="Denver" id="Denver">
+            <input class="major-cities" type="submit" name="submit" value="Seattle" id="Seattle">
+            <input class="major-cities" type="submit" name="submit" value="San Francisco" id="SF">
+            <input class="major-cities" type="submit" name="submit" value="Orlando" id="Orlando">
+            <input class="major-cities" type="submit" name="submit" value="New York City" id="NYC">
+            <input class="major-cities" type="submit" name="submit" value="Chicago" id="Chicago">
+            <input class="major-cities" type="submit" name="submit" value="Austin" id="Austin"> -->
+                </form>
+        </div>
+    </main>
+
+    <div class="weather-container">
+        <div class="container-body">Showing Weather for: <span id="city-search-term"></span></div>
+            <div class="row">
+                <div class="col-12">
+                    <h2 id="city-name"></h2>
+                    <h3 id="date"></h3>
+                    <p id="temp"></p>
+                    <p id="wind-speed"></p>
+                    <p id="humidity"></p>
+                </div>
+            </div>
+        </div>
     </div>
-    
+
+<script src="assets/script.js"></script>
+</body>
+
 </html>
