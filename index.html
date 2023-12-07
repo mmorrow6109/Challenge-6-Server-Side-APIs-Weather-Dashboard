@@ -18,36 +18,16 @@
     <main>
         <div class="card">
             <h2 class="card-header">Search for a City:</h2>
-                <form id="city-form" action="index.php" method="post" class="card-body">
-                <input id="city-name" class="city-search" type="text" name="city" placeholder="City Name">
-                <input id="search-btn" class="search-btn" type="submit" name="submit" value="Search">
-            <!-- <input class="cities" type="submit" name="submit" value="Atlanta" id="Atlanta">
-            <input class="cities" type="submit" name="submit" value="Denver" id="Denver">
-            <input class="cities" type="submit" name="submit" value="Seattle" id="Seattle">
-            <input class="cities" type="submit" name="submit" value="San Francisco" id="SF">
-            <input class="cities" type="submit" name="submit" value="Orlando" id="Orlando">
-            <input class="cities" type="submit" name="submit" value="New York City" id="NYC">
-            <input class="cities" type="submit" name="submit" value="Chicago" id="Chicago">
-            <input class="cities" type="submit" name="submit" value="Austin" id="Austin"> -->
+                <form class="card-body" id="city-form" action="index.php" method="post">
+                    <input class="city-search" id="city-name" type="text" name="city" placeholder="City Name">
+                    <input class="search-btn" id="search-btn" type="submit" name="submit" value="Search">
                 </form>
+            <div>Showing Weather for: <span id="city-name-display"></span></div>
         </div>
+        
     </main>
-
-    <div class="weather-container">
-        <div class="container-body">Showing Weather for: <span id="city-search-term"></span></div>
-            <div class="row">
-                <div class="col-12">
-                    <h2 id="searched-city-name"></h2>
-                    <h3 id="date"></h3>
-                    <p id="temp"></p>
-                    <p id="wind-speed"></p>
-                    <p id="humidity"></p>
-                </div>
-            </div>
-        </div>
-    </div>
-
 <script src="assets/script.js"></script>
 </body>
+
 
 </html>
