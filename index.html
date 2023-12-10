@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script> -->
     <link rel="stylesheet" href="assets/style.css">
     <title>Weather App</title>
 </head>
@@ -23,11 +21,12 @@
                     <input class="search-btn" id="search-btn" type="submit" name="submit" value="Search">
                 </form>
         </div>
-        <h3>Showing Weather for: </h3>
-            <div id="weather-container" class="weather-container"><span id="city-name-display"></span></div>
-            <div id="five-weather-container" class="five-weather-container"></div>
+            <h3 id="showing-weather">Showing Weather for: </h3>
+                <div id="weather-container" class="weather-container"></div>
+                <div id="five-weather-container" class="five-weather-container"></div>
             
     </main>
+    
 <script src="assets/script.js"></script>
 </body>
 

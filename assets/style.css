@@ -2,6 +2,7 @@
     --header-blue: #1512d0;
     --major-cities: #c7dbe0;
     --hover: #345363;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .header {
@@ -14,6 +15,12 @@
     display: flex;
     justify-content: center;
     border-radius: 9px;
+}
+
+.body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .card {
@@ -56,7 +63,7 @@
     box-shadow: 1px 2px rgb(14, 31, 35);
 }
 
-.cities {
+.cities-btn {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,6 +89,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    background-color: var(--major-cities);
+    /* border: 1px solid var(--hover);
+    border-radius: 5px; */
 }
 .five-weather-container {
     display: flex;
@@ -89,5 +99,10 @@
     width: 100%;
     align-items: center;
     justify-content: space-between;
+    /* border: 1px solid var(--hover);
+    border-radius: 5px; */
 }
 
+.weather-icon {
+    margin-left: 50px;
+}
