@@ -106,3 +106,31 @@
 .weather-icon {
     margin-left: 50px;
 }
+
+@media (max-width: 690px) {
+    .body {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 90%;
+    }
+    .city-search {
+        width: 90%;
+    }
+    .search-btn {
+        width: 90%;
+    }
+    .cities-btn {
+        width: 90%;
+    }
+    .weather-container {
+        width: 90%;
+    }
+    .five-weather-container {
+        width: 90%;
+    }
+    .weather-icon {
+        margin-left: 0px;
+    }
+}
