@@ -31,7 +31,8 @@ let getCity = function (event) {
       let temperature = data.list[5].main.temp;         
       let windSpeed = data.list[0].wind.speed; 
       let humidity = data.list[6].main.humidity; 
-
+      
+      console.log(city)
       console.log('Temperature: ' + temperature + '°F');
       console.log('Wind Speed: ' + windSpeed);
       console.log('Humidity: ' + humidity);
@@ -67,11 +68,9 @@ let getCity = function (event) {
 let displayWeather = function (list, containerEl, city) {
   console.log(list);
 
-  let showingWeather = document.createElement("h3");
+  let showingWeather = document.getElementById('showing-weather');
+  showingWeather.innerHTML = "Showing Weather for: " + (city);
   let display = document.getElementById("showing-weather");
-  // showingWeather.textContent = ('Showing Weather for: ' & city);
-  showingWeather.textContent = (city);
-  display.appendChild(showingWeather);
 
   let container=document.createElement('p');
   let currentCity = document.createElement('p');
@@ -101,16 +100,51 @@ let displayWeather = function (list, containerEl, city) {
   containerEl.appendChild(container);
 }
 
-function fiveDayForecast (weather) {
+function fiveDayForecast (weather, city) {
   let weatherArray = weather.list;
 
   for (let i=0; i < weatherArray.length; i++) {
     if (weatherArray[i].dt_txt.slice(11,13) == "12") {
-      console.log(weatherArray[i].dt_txt);
-      displayWeather(weatherArray[i], fiveWeatherContainerEl);
+      console.log('your search!' + weatherArray[i].dt_txt);
+      displayWeather(weatherArray[i], fiveWeatherContainerEl, city);
     }
 
 }
 }
+
+let loadSearches = function() {
+  let cityHistory = JSON.parse(localStorage.getItem('cityHistory')) || [];
+
+  for (let i = 0; i < cityHistory.length; i++) {
+    let city = cityHistory[i];
+
+    let searchedCity = document.createElement("button");
+    searchedCity.classList.add("cities-btn");
+    searchedCity.id = "city-btn";
+    let citySearchTerm = document.createTextNode(city);
+    searchedCity.appendChild(citySearchTerm);
+
+    // create "x" button
+    let closeButton = document.createElement("button");
+    closeButton.textContent = "x";
+    closeButton.classList.add("close-btn");
+    closeButton.addEventListener('click', function(event) {
+      event.stopPropagation(); // prevent the city-btn click event from firing
+      searchedCity.remove(); // remove the city-btn
+    });
+    searchedCity.appendChild(closeButton); // append the "x" button to the city-btn
+
+    // add event listener
+    searchedCity.addEventListener('click', function() {
+      getCity(this.innerHTML.replace("x", "")); // call getCity with the button's innerHTML, excluding the "x"
+    });
+
+    let card = document.querySelector('.card-body'); // select the card
+    card.appendChild(searchedCity); // append the button to the card
+  }
+}
+
+// call loadSearches when the page loads
+window.onload = loadSearches;
 
 searchBtnEl.addEventListener("click", getCity);

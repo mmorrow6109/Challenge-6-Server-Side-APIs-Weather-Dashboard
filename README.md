@@ -21,3 +21,6 @@ N/A
 https://mmorrow6109.github.io/Challenge-6-Server-Side-APIs-Weather-Dashboard/
 
 ## Screenshots
+![Alt text](WA1.png)
+![Alt text](WA2.png)
+![Alt text](WA3.png)

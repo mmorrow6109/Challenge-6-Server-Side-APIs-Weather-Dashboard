@@ -17,16 +17,9 @@
     border-radius: 9px;
 }
 
-.body {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
 .card {
     width: 350px;
     margin: 5px 0;  
-    /* display: flex;  */
 }
 
 .card-header {
@@ -44,8 +37,7 @@
     display: flex;
     flex-direction: column;
     margin: 20px 1px 0 11px;
-    width: 290px;
-    
+    width: 290px;    
 }
 
 .search-btn {
@@ -65,9 +57,9 @@
 
 .cities-btn {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     border: none;
     border-radius: 5px;
     padding: 5px 10px;
@@ -77,11 +69,22 @@
     cursor: pointer;
 }
 
+.close-btn {
+    background-color: #158ca7;
+    color: white;
+    cursor: pointer;
+    float: right;
+}
+
 .cities:hover {
     background-color: var(--hover);
     color: white;
     transform: translate(0,0);
     box-shadow: 0 0 10px #000000;
+}
+
+.hide {
+    display: none;
 }
 
 .weather-container {
@@ -90,17 +93,18 @@
     align-items: center;
     justify-content: space-between;
     background-color: var(--major-cities);
-    /* border: 1px solid var(--hover);
-    border-radius: 5px; */
+    border: 1px solid var(--hover);
+    border-radius: 5px;
 }
+
 .five-weather-container {
     display: flex;
     flex-direction: row;
     width: 100%;
-    align-items: center;
     justify-content: space-between;
-    /* border: 1px solid var(--hover);
-    border-radius: 5px; */
+    border: 1px solid var(--major-cities);
+    border-radius: 5px;
+    background-color: var(--hover);
 }
 
 .weather-icon {
